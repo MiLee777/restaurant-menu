@@ -30,6 +30,25 @@ img {
   width: 500px;
 }
 
+p {
+  font-weight: 600;
+}
+
 .cartIcon {
   width: 70px;
+}
+
+.categoryButton {
+  padding: 10px;
+  transition: .5s ease-in;
+  cursor: pointer;
+}
+
+.categoryButton:hover {
+  background-color: #fdeb6b;;
+}
+
+.categoryButtonSelected {
+  padding: 10px;
+  background-color: green;
 }
