@@ -1,9 +1,18 @@
+import { useSelector } from "react-redux";
 import dishesData from "../../Data/DataDishes";
+import { getSelectedCategory } from "../../redux/dishesSlice";
 
 export const Dish = () => {
+
+  const selectedCategory = useSelector(getSelectedCategory);
   return (
     <div>
-      {dishesData.map(dish => {
+      {dishesData
+      .filter(dish => {
+        if(selectedCategory === 'ALL') return true;
+        return selectedCategory === dish.category;
+      })
+      .map(dish => {
         const { id, name, price, img } = dish;
         
         return (
