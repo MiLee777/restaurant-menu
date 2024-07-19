@@ -1,10 +1,15 @@
 import { useSelector } from "react-redux";
 import dishesData from "../../Data/DataDishes";
 import { getSelectedCategory } from "../../redux/dishesSlice";
+import { ChangeQuantuty } from "../Cart/ChangeQuantity";
+import { useState } from "react";
 
 export const Dish = () => {
 
+  const [quantity, setQuantity] = useState(1);
+
   const selectedCategory = useSelector(getSelectedCategory);
+
   return (
     <div>
       {dishesData
@@ -20,7 +25,7 @@ export const Dish = () => {
             <img src={ `../images/${img}.jpg`} alt="Meal" />
             <h1>{ name }</h1>
             <p>${ price }</p>
-            <button>How many portions?</button>
+            <ChangeQuantuty quantity={ quantity } setQuantity={ setQuantity } />
             <button>Add to cart</button>
           </div>
         )
