@@ -1,15 +1,7 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -26,15 +18,28 @@ body {
   padding: 20px;
 }
 
-img {
+.image {
   width: 500px;
+  padding: 30px;
 }
 
-p {
+p, 
+h1, 
+h2, 
+h3, 
+button {
+  margin: 10px;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
+p, button {
+  font-size: 20px;
+}
+
 button {
+  background-color: #fdeb6b;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -55,4 +60,8 @@ button {
 .categoryButtonSelected {
   padding: 10px;
   background-color: green;
+}
+
+.icon {
+  width: 30px;
 }

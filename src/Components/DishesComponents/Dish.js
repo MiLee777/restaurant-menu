@@ -25,7 +25,7 @@ export const Dish = () => {
         
         return (
           <div key={ id }>
-            <img src={ `../images/${img}.jpg`} alt="Meal" />
+            <img className="image" src={ `../images/${img}.jpg`} alt="Meal" />
             <h1>{ name }</h1>
             <p>${ price }</p>
             <ChangeQuantuty quantity={ quantity } setQuantity={ setQuantity } />
