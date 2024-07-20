@@ -27,13 +27,16 @@ p,
 h1, 
 h2, 
 h3, 
-button {
+button,
+span {
   margin: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
-p, button {
+p, 
+button,
+span {
   font-size: 20px;
 }
 
