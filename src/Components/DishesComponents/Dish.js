@@ -1,14 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import dishesData from "../../Data/DataDishes";
 import { getSelectedCategory } from "../../redux/dishesSlice";
 import { ChangeQuantuty } from "../Cart/ChangeQuantity";
 import { useState } from "react";
+import { addItemToCart } from "../../redux/cartSlice";
 
 export const Dish = () => {
 
   const [quantity, setQuantity] = useState(1);
 
   const selectedCategory = useSelector(getSelectedCategory);
+
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -26,7 +29,9 @@ export const Dish = () => {
             <h1>{ name }</h1>
             <p>${ price }</p>
             <ChangeQuantuty quantity={ quantity } setQuantity={ setQuantity } />
-            <button>Add to cart</button>
+            <button onClick={() => dispatch(addItemToCart({ dish, quantity }))}>
+              Add to cart
+            </button>
           </div>
         )
       })}
